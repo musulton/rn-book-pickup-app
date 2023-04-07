@@ -3,6 +3,7 @@ import React from "react";
 
 import Books from "../screens/Books";
 import History from "../screens/History";
+import {ROUTES} from "../constants";
 
 const Tab = createBottomTabNavigator();
 
@@ -11,8 +12,8 @@ const TabNavigation: React.FC = () => {
         <Tab.Navigator screenOptions={{
             headerShown: false
         }} >
-            <Tab.Screen name="Books" component={Books} />
-            <Tab.Screen name="History" component={History} />
+            <Tab.Screen name={ROUTES.BOOKS} component={Books} />
+            <Tab.Screen name={ROUTES.HISTORY} component={History} />
         </Tab.Navigator>
     );
 }
