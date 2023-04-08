@@ -4,6 +4,7 @@ import React from "react";
 import Books from "../screens/Books";
 import History from "../screens/History";
 import {ROUTES} from "../constants";
+import Icon from "../components/Icon";
 
 const Tab = createBottomTabNavigator();
 
@@ -12,8 +13,22 @@ const TabNavigation: React.FC = () => {
         <Tab.Navigator screenOptions={{
             headerShown: false
         }} >
-            <Tab.Screen name={ROUTES.BOOKS} component={Books} />
-            <Tab.Screen name={ROUTES.HISTORY} component={History} />
+            <Tab.Screen
+                name={ROUTES.BOOKS}
+                component={Books}
+                options={{
+                    tabBarLabel: () => null,
+                    tabBarIcon: ({color, size}) => <Icon name={"book-outline"} size={size} color={color} />
+                }}
+            />
+            <Tab.Screen
+                name={ROUTES.HISTORY}
+                component={History}
+                options={{
+                    tabBarLabel: () => null,
+                    tabBarIcon: ({color, size}) => <Icon name={"bookmarks"} size={size} color={color} />
+                }}
+            />
         </Tab.Navigator>
     );
 }

@@ -3,7 +3,7 @@ const { width, height } = Dimensions.get("window");
 
 export const COLORS = {
     // base colors
-    primary: "#FFD600",
+    primary: "#039BE5",
     secondary: "#25282F",
 
     // colors
@@ -34,6 +34,6 @@ export const SIZES = {
     height
 };
 
-const appTheme = { COLORS, SIZES, FONTS };
+const appTheme = { COLORS, SIZES };
 
 export default appTheme;

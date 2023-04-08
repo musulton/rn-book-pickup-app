@@ -1,8 +1,18 @@
-import {StyleSheet} from "react-native";
+import {ImageStyle, StyleSheet, TextStyle, ViewStyle} from "react-native";
 
 import {COLORS, SIZES} from "../../constants";
 
-const styles = StyleSheet.create({
+interface Styles {
+    container: ViewStyle
+    leftSection: ViewStyle
+    rightSection: ViewStyle
+    image: ImageStyle
+    title: TextStyle
+    author: TextStyle
+    edition: TextStyle
+}
+
+const styles = StyleSheet.create<Styles>({
     container: {
         display: "flex",
         flexDirection: "row",

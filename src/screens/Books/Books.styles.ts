@@ -1,11 +1,15 @@
-import {StyleSheet} from "react-native";
-import {COLORS, SIZES} from "../../constants";
+import {StyleSheet, ViewStyle} from "react-native";
 
-const styles = StyleSheet.create({
+import {COLORS} from "../../constants";
+
+interface Styles {
+    container: ViewStyle
+}
+
+const styles = StyleSheet.create<Styles>({
     container: {
         flex: 1,
         backgroundColor: COLORS.white,
-        padding: SIZES.padding1
     },
 });
 
