@@ -40,11 +40,12 @@ const CardBook: React.FC<CardBookProps> = (props: CardBookProps) => {
         <TouchableOpacity
             style={styles.container}
             onPress={props.onPress}
+            disabled={!props.onPress}
         >
             {props.withImage && <LeftSection />}
-            <RightSection {...props} />
+            <RightSection title={props.title} author={props.author} edition={props.edition} />
         </TouchableOpacity>
     )
 }
 
-export default CardBook
+export default React.memo(CardBook)

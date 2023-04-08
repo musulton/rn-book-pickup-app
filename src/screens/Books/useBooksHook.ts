@@ -3,6 +3,7 @@ import useFetch from "../../hooks/useFetch";
 import {getBooks} from "../../services/api";
 import {Book} from "../../types";
 
+type CurrentPageFn = (prevState: number) => number
 interface UseBookEffect {
     getter: {
         data: Array<Book>
@@ -10,23 +11,24 @@ interface UseBookEffect {
         loading: boolean
     }
     setter: {
-        currentPage: (page: number) => void
+        currentPage: (page: number | CurrentPageFn) => void
     }
 }
 
 const useBookEffect: () => UseBookEffect = () => {
     const [currentPage, setCurrentPage] = React.useState(1)
-    const [bookList, setBookList] = React.useState([])
+    const [bookList, setBookList] = React.useState<Array<Book>>([])
     const {data, error, loading} = useFetch(getBooks, { page: currentPage })
 
     React.useEffect(() => {
-        const _bookList = data?.data?.works?.map((book: any) => ({
+        const dataTransform: Array<Book> = data?.data?.works?.map((book: any) => ({
             title: book?.title,
             author: book?.authors[0]?.name,
             edition: book?.["cover_edition_key"]
-        }))
+        })) || []
 
-        setBookList(_bookList)
+        const newBooks: Array<Book> = [...bookList, ...dataTransform]
+        setBookList(newBooks as Array<Book>)
     }, [data?.data?.works])
 
     return {
