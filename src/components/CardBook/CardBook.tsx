@@ -9,11 +9,15 @@ interface CardBookProps extends Book {
     withImage?: boolean
 }
 
-const LeftSection: React.FC = () => {
+interface LeftSectionProps {
+    coverImg?: string
+}
+
+const LeftSection: React.FC<LeftSectionProps> = (props) => {
     return (
         <View style={styles.leftSection}>
             <Image
-                source={{uri: "https://edit.org/images/cat/book-covers-big-2019101610.jpg"}}
+                source={{uri: props.coverImg}}
                 style={styles.image}
             />
         </View>
@@ -42,8 +46,8 @@ const CardBook: React.FC<CardBookProps> = (props: CardBookProps) => {
             onPress={props.onPress}
             disabled={!props.onPress}
         >
-            {props.withImage && <LeftSection />}
-            <RightSection title={props.title} author={props.author} edition={props.edition} />
+            {props.withImage && <LeftSection coverImg={props.coverImg} />}
+            <RightSection title={props.title} author={props.author} edition={props.edition} pickupDate={props.pickupDate} />
         </TouchableOpacity>
     )
 }

@@ -17,16 +17,16 @@ const styles = StyleSheet.create<Styles>({
     container: {
         display: "flex",
         flexDirection: "row",
+        alignItems: "center",
         paddingHorizontal: SIZES.padding2,
         marginVertical: SIZES.padding2
     },
     leftSection: {
-        flex: 1,
         marginRight: 5,
         resizeMode: "stretch",
     },
     rightSection: {
-        flex: 3,
+        flex: 1,
         display: "flex",
         marginLeft: 10,
         alignContent: "center",
@@ -34,8 +34,9 @@ const styles = StyleSheet.create<Styles>({
     },
     image: {
         height: 100,
-        resizeMode: "stretch",
+        width: 70,
         borderRadius: SIZES.borderRadius,
+        resizeMode: "cover"
     },
     title: {
         fontSize: 18,

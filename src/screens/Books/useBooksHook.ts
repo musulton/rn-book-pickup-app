@@ -2,6 +2,7 @@ import React from "react";
 import useFetch from "../../hooks/useFetch";
 import {getBooks} from "../../services/api";
 import {Book} from "../../types";
+import {getDummyCoverImg} from "../../utils/function";
 
 type CurrentPageFn = (prevState: number) => number
 interface UseBookEffect {
@@ -24,7 +25,8 @@ const useBookEffect: () => UseBookEffect = () => {
         const dataTransform: Array<Book> = data?.data?.works?.map((book: any) => ({
             title: book?.title,
             author: book?.authors[0]?.name,
-            edition: book?.["cover_edition_key"]
+            edition: book?.["cover_edition_key"],
+            coverImg: getDummyCoverImg()
         })) || []
 
         const newBooks: Array<Book> = [...bookList, ...dataTransform]

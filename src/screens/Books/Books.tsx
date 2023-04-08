@@ -1,4 +1,4 @@
-import {ActivityIndicator, FlatList, ListRenderItemInfo, Text, View} from "react-native";
+import {ActivityIndicator, FlatList, ListRenderItemInfo, SafeAreaView, Text, View} from "react-native";
 import React from "react";
 import {NavigationProp} from "@react-navigation/native";
 
@@ -8,16 +8,13 @@ import {Book} from "../../types";
 
 import styles from "./Books.styles";
 import useBooksHook from "./useBooksHook";
+import Header from "../../components/Header";
+import Separator from "../../components/Separator";
+import EmptyState from "../../components/EmptyState";
 
 interface BooksProps {
     navigation: NavigationProp<any>
 }
-
-const EmptyState: React.FC = () => (
-    <View style={styles.emptyState}>
-        <Text>Data is nof found</Text>
-    </View>
-)
 
 const Books: React.FC<BooksProps> = (props) => {
     const { getter, setter } = useBooksHook();
@@ -34,24 +31,28 @@ const Books: React.FC<BooksProps> = (props) => {
     }
 
     return (
-        <FlatList
-            data={getter?.data}
-            renderItem={(props: ListRenderItemInfo<Book>) => (
-                <CardBook
-                    title={props.item.title}
-                    author={props.item.author}
-                    edition={props.item.edition}
-                    onPress={onNavigate(props.item)}
-                    withImage={true}
-                />
-            )}
-            onEndReached={onEndReached}
-            refreshing={getter.loading}
-            contentContainerStyle={!hasData && styles.container}
-            ListEmptyComponent={<EmptyState />}
-            ListFooterComponent={hasData ? <ActivityIndicator size={"small"} /> : null}
-            initialNumToRender={10}
-        />
+        <SafeAreaView style={styles.container}>
+            <Header />
+            <FlatList
+                data={getter?.data}
+                renderItem={(props: ListRenderItemInfo<Book>) => (
+                    <CardBook
+                        title={props.item.title}
+                        author={props.item.author}
+                        edition={props.item.edition}
+                        coverImg={props.item.coverImg}
+                        onPress={onNavigate(props.item)}
+                        withImage={true}
+                    />
+                )}
+                onEndReached={onEndReached}
+                refreshing={getter.loading}
+                contentContainerStyle={!hasData && styles.scrollContainer}
+                ListEmptyComponent={<EmptyState />}
+                ListFooterComponent={hasData ? <ActivityIndicator size={"small"} /> : null}
+                initialNumToRender={10}
+            />
+        </SafeAreaView>
     )
 }
 

@@ -29,7 +29,7 @@ export const COLORS = {
 export const SIZES = {
     padding1: 20,
     padding2: 10,
-    borderRadius: 10,
+    borderRadius: 6,
 
     // app dimensions
     width,

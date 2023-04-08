@@ -3,11 +3,21 @@ import {COLORS} from "../../constants";
 
 const styles = StyleSheet.create({
     container: {
+        display: "flex",
+        flex: 1,
         backgroundColor: COLORS.background,
+        paddingTop: 20
     },
-    separator: {
-        height: 1,
-        backgroundColor: COLORS.lightGray3
+    scrollContainer: {
+        justifyContent: "center",
+        alignItems: "center",
+        flex: 1
+    },
+    title: {
+        textAlign: "center",
+        fontSize: 20,
+        fontWeight: "bold",
+        marginVertical: 10
     }
 });
 

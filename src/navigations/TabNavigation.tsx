@@ -10,15 +10,21 @@ const Tab = createBottomTabNavigator();
 
 const TabNavigation: React.FC = () => {
     return (
-        <Tab.Navigator screenOptions={{
-            headerShown: false
-        }} >
+        <Tab.Navigator
+            screenOptions={{
+                headerShown: false,
+                tabBarStyle: {
+                    borderTopWidth: 0
+                }
+            }}
+        >
             <Tab.Screen
                 name={ROUTES.BOOKS}
                 component={Books}
                 options={{
                     tabBarLabel: () => null,
-                    tabBarIcon: ({color, size}) => <Icon name={"book-outline"} size={size} color={color} />
+                    tabBarIcon: ({color, size}) => <Icon name={"book-outline"} size={size} color={color} />,
+                    headerTitle: "Book List"
                 }}
             />
             <Tab.Screen
@@ -26,7 +32,8 @@ const TabNavigation: React.FC = () => {
                 component={History}
                 options={{
                     tabBarLabel: () => null,
-                    tabBarIcon: ({color, size}) => <Icon name={"calendar-outline"} size={size} color={color} />
+                    tabBarIcon: ({color, size}) => <Icon name={"calendar-outline"} size={size} color={color} />,
+                    headerTitle: ""
                 }}
             />
         </Tab.Navigator>

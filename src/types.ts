@@ -3,4 +3,5 @@ export interface Book {
     author: string
     edition: string
     pickupDate?: Date
+    coverImg?: string | undefined
 }

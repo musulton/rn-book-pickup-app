@@ -60,7 +60,7 @@ const BookInfo = React.memo((props: Book): JSX.Element => (
     <ScrollView contentContainerStyle={styles.scrollContainer}>
         <View style={[styles.imageWrapper, { backgroundColor: getRandomColor() }]}>
             <Image
-                source={{uri: "https://edit.org/images/cat/book-covers-big-2019101610.jpg"}}
+                source={{uri: props.coverImg}}
                 style={styles.image}
             />
         </View>
@@ -80,7 +80,7 @@ const BookDetails: React.FC<BookDetailsProps> = (props) => {
     const dispatch = useDispatch();
 
     const {route: { params }} = props
-    const {title, author, edition} = params?.book
+    const {title, author, edition, coverImg} = params?.book
 
     const onSubmit = (date: Date) => {
         dispatch(add({
@@ -95,7 +95,7 @@ const BookDetails: React.FC<BookDetailsProps> = (props) => {
 
     return (
         <View style={styles.container}>
-            <BookInfo title={title} author={author} edition={edition} />
+            <BookInfo title={title} author={author} edition={edition} coverImg={coverImg} />
             <SubmitBook onSubmit={onSubmit} />
         </View>
     );
