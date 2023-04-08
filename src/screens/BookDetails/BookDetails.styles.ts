@@ -19,7 +19,7 @@ const styles = StyleSheet.create<Styles>({
     container: {
         display: "flex",
         flex: 1,
-        backgroundColor: '#fff',
+        backgroundColor: COLORS.background,
         height: "100%"
     },
     scrollContainer: {
@@ -58,13 +58,16 @@ const styles = StyleSheet.create<Styles>({
         fontWeight: "bold"
     },
     description: {
-        fontSize: 12,
+        fontSize: 14,
         color: COLORS.lightGray,
         lineHeight: 20,
         paddingHorizontal: SIZES.padding1
     },
     buttonWrapper: {
-        padding: 20
+        padding: 20,
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "center"
     }
 });
 

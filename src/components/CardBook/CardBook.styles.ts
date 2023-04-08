@@ -10,6 +10,7 @@ interface Styles {
     title: TextStyle
     author: TextStyle
     edition: TextStyle
+    pickupDate: TextStyle
 }
 
 const styles = StyleSheet.create<Styles>({
@@ -47,6 +48,10 @@ const styles = StyleSheet.create<Styles>({
     edition: {
         fontSize: 16,
         fontWeight: "500"
+    },
+    pickupDate: {
+        fontSize: 16,
+        marginTop: 5,
     }
 })
 

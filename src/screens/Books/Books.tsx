@@ -30,6 +30,7 @@ const Books: React.FC<BooksProps> = (props) => {
                     <CardBook
                         {...props.item}
                         onPress={onNavigate(props.item)}
+                        withImage={true}
                     />
                 )}
             />

@@ -10,7 +10,9 @@ interface Styles {
 const styles = StyleSheet.create<Styles>({
     container: {
         display: "flex",
+        flex: 1,
         justifyContent: "center",
+        flexDirection: "row",
         alignItems: "center",
         backgroundColor: COLORS.primary,
         borderRadius: SIZES.borderRadius

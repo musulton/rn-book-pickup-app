@@ -26,7 +26,7 @@ const TabNavigation: React.FC = () => {
                 component={History}
                 options={{
                     tabBarLabel: () => null,
-                    tabBarIcon: ({color, size}) => <Icon name={"bookmarks"} size={size} color={color} />
+                    tabBarIcon: ({color, size}) => <Icon name={"calendar-outline"} size={size} color={color} />
                 }}
             />
         </Tab.Navigator>
