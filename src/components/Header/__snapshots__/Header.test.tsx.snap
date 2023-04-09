@@ -1,0 +1,123 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> should render correctly 1`] = `
+<View
+  style={
+    {
+      "borderBottomColor": "#EFEFF0",
+      "borderBottomWidth": 1,
+      "display": "flex",
+      "justifyContent": "flex-start",
+      "padding": 20,
+    }
+  }
+>
+  <Text
+    style={
+      {
+        "color": "#64676D",
+      }
+    }
+  >
+    Hi, Your account name
+  </Text>
+  <Text
+    style={
+      {
+        "fontSize": 20,
+        "fontWeight": "bold",
+      }
+    }
+  >
+    Discover Latest Book
+  </Text>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "backgroundColor": "#EFEFF0",
+        "borderRadius": 6,
+        "flexDirection": "row",
+        "marginTop": 10,
+        "padding": 10,
+      }
+    }
+  >
+    <TextInput
+      onBlur={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      placeholder="Search book.."
+      style={
+        {
+          "fontSize": 20,
+          "marginLeft": 10,
+          "width": "90%",
+        }
+      }
+      value=""
+    />
+  </View>
+</View>
+`;
+
+exports[`<Header /> should render correctly when <SearchBook /> is filled 1`] = `
+<View
+  style={
+    {
+      "borderBottomColor": "#EFEFF0",
+      "borderBottomWidth": 1,
+      "display": "flex",
+      "justifyContent": "flex-start",
+      "padding": 20,
+    }
+  }
+>
+  <Text
+    style={
+      {
+        "color": "#64676D",
+      }
+    }
+  >
+    Hi, Your account name
+  </Text>
+  <Text
+    style={
+      {
+        "fontSize": 20,
+        "fontWeight": "bold",
+      }
+    }
+  >
+    Discover Latest Book
+  </Text>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "backgroundColor": "#EFEFF0",
+        "borderRadius": 6,
+        "flexDirection": "row",
+        "marginTop": 10,
+        "padding": 10,
+      }
+    }
+  >
+    <TextInput
+      onBlur={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      placeholder="Search book.."
+      style={
+        {
+          "fontSize": 20,
+          "marginLeft": 10,
+          "width": "90%",
+        }
+      }
+      value="book title"
+    />
+  </View>
+</View>
+`;

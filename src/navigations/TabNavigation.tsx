@@ -3,7 +3,7 @@ import React from "react";
 
 import Books from "../screens/Books";
 import History from "../screens/History";
-import {ROUTES} from "../constants";
+import {COLORS, ROUTES} from "../constants";
 import Icon from "../components/Icon";
 
 const Tab = createBottomTabNavigator();
@@ -14,7 +14,8 @@ const TabNavigation: React.FC = () => {
             screenOptions={{
                 headerShown: false,
                 tabBarStyle: {
-                    borderTopWidth: 0
+                    borderTopWidth: 1,
+                    borderTopColor: COLORS.lightGray2,
                 }
             }}
         >
@@ -22,18 +23,16 @@ const TabNavigation: React.FC = () => {
                 name={ROUTES.BOOKS}
                 component={Books}
                 options={{
-                    tabBarLabel: () => null,
+                    tabBarShowLabel: false,
                     tabBarIcon: ({color, size}) => <Icon name={"book-outline"} size={size} color={color} />,
-                    headerTitle: "Book List"
                 }}
             />
             <Tab.Screen
                 name={ROUTES.HISTORY}
                 component={History}
                 options={{
-                    tabBarLabel: () => null,
-                    tabBarIcon: ({color, size}) => <Icon name={"calendar-outline"} size={size} color={color} />,
-                    headerTitle: ""
+                    tabBarShowLabel: false,
+                    tabBarIcon: ({color, size}) => <Icon name={"time-outline"} size={size} color={color} />,
                 }}
             />
         </Tab.Navigator>

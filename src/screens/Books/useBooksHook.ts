@@ -1,4 +1,5 @@
 import React from "react";
+
 import useFetch from "../../hooks/useFetch";
 import {getBooks} from "../../services/api";
 import {Book} from "../../types";
@@ -30,7 +31,7 @@ const useBookEffect: () => UseBookEffect = () => {
         })) || []
 
         const newBooks: Array<Book> = [...bookList, ...dataTransform]
-        setBookList(newBooks as Array<Book>)
+        setBookList(newBooks)
     }, [data?.data?.works])
 
     return {

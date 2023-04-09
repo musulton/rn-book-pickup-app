@@ -2,7 +2,7 @@ export const colors = [
     "#4DB6AC", "#81C784", "#AED581", "#DCE775", "#FFD54F", "#FFB74D", "#FF8A65"
 ]
 
-const dummyCoverBook = [
+export const dummyCoverBook = [
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSB88clyXTOSsZbv3HvgH1OpTSF5aIEsXstUg&usqp=CAU",
     "https://marketplace.canva.com/EAD7WdPHbx8/1/0/1003w/canva-colorful-abstract-adventure-children%27s-book-cover-yT1fFarv3nc.jpg",
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpP-TqlC_wJRlyQ8P0tlAZ58v2S_LkvxSJgQ&usqp=CAU",

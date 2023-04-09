@@ -1,6 +1,10 @@
-import {StyleSheet} from "react-native";
+import {StyleSheet, ViewStyle} from "react-native";
 
-const styles = StyleSheet.create({
+interface Styles {
+    emptyState: ViewStyle
+}
+
+const styles = StyleSheet.create<Styles>({
     emptyState: {
         display: "flex",
         flex: 1,

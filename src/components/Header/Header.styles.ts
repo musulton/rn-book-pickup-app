@@ -1,11 +1,22 @@
-import {StyleSheet} from "react-native";
+import {StyleSheet, TextStyle, ViewStyle} from "react-native";
+
 import {COLORS, SIZES} from "../../constants";
 
-const styles = StyleSheet.create({
+interface Styles {
+    container: ViewStyle
+    username: TextStyle
+    title: TextStyle
+    input: TextStyle
+    searchBar: ViewStyle
+}
+
+const styles = StyleSheet.create<Styles>({
     container: {
         display: "flex",
         justifyContent: "flex-start",
-        padding: 20,
+        padding: SIZES.padding1,
+        borderBottomWidth: 1,
+        borderBottomColor: COLORS.lightGray2,
     },
     username: {
         color: COLORS.lightGray
@@ -16,12 +27,12 @@ const styles = StyleSheet.create({
     },
     input: {
         fontSize: 20,
-        marginLeft: 10,
+        marginLeft: SIZES.padding2,
         width: "90%",
     },
     searchBar: {
-        marginTop: 10,
-        padding: 10,
+        marginTop: SIZES.padding2,
+        padding: SIZES.padding2,
         flexDirection: "row",
         backgroundColor: COLORS.lightGray2,
         borderRadius: SIZES.borderRadius,

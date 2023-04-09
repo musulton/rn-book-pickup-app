@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Separator /> should render Separator correctly 1`] = `
+<View
+  style={
+    {
+      "backgroundColor": "#D4D5D6",
+      "height": 1,
+    }
+  }
+/>
+`;

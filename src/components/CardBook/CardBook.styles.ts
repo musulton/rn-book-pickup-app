@@ -28,7 +28,7 @@ const styles = StyleSheet.create<Styles>({
     rightSection: {
         flex: 1,
         display: "flex",
-        marginLeft: 10,
+        marginLeft: SIZES.padding2,
         alignContent: "center",
         justifyContent: "center"
     },

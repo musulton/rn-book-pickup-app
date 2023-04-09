@@ -11,6 +11,7 @@ import {Book} from "../../types";
 import {add} from "../../store/slices/bookSlice";
 
 import styles from "./BookDetails.styles";
+import useBookDetails from "./useBookDetails";
 
 interface BookDetailsProps {
     navigation: NavigationProp<any>,
@@ -22,19 +23,17 @@ interface SubmitBookProps {
 }
 
 const SubmitBook: React.FC<SubmitBookProps> = (props) => {
-    const [selectedDate, setSelectedDate] = React.useState(new Date());
-    const [datePickerVisible, setDatePickerVisible] = React.useState(false);
-
+    const {getter, setter} = useBookDetails()
     const showDatePicker = () => {
-        setDatePickerVisible(true);
+        setter.datePickerVisible(true);
     };
 
     const hideDatePicker = () => {
-        setDatePickerVisible(false);
+        setter.datePickerVisible(false);
     };
 
     const handleConfirm = (date: Date) => {
-        setSelectedDate(date);
+        setter.selectedDate(date);
         hideDatePicker();
         props.onSubmit(date);
     };
@@ -43,8 +42,8 @@ const SubmitBook: React.FC<SubmitBookProps> = (props) => {
         <View style={styles.buttonWrapper}>
             <Button text={"Set Pick-up Date"} onPress={showDatePicker} />
             <DateTimePicker
-                date={selectedDate}
-                isVisible={datePickerVisible}
+                date={getter.selectedDate}
+                isVisible={getter.datePickerVisible}
                 mode="date"
                 onConfirm={handleConfirm}
                 onCancel={hideDatePicker}

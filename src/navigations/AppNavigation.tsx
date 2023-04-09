@@ -1,13 +1,10 @@
 import React from "react";
 import {createNativeStackNavigator} from "@react-navigation/native-stack";
 import {NavigationContainer, DefaultTheme} from "@react-navigation/native";
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import TabNavigation from "./TabNavigation";
 import BookDetails from "../screens/BookDetails";
-import {COLORS, ROUTES} from "../constants";
-import Header from "../components/Header";
-import {Text, View} from "react-native";
+import {ROUTES} from "../constants";
 
 const Stack = createNativeStackNavigator();
 
@@ -29,7 +26,7 @@ const AppNavigation: React.FC = () => {
                     name={ROUTES.HOME}
                     component={TabNavigation}
                     options={{
-                        header: () => null
+                        headerShown: false
                     }}
                 />
                 <Stack.Screen

@@ -1,6 +1,6 @@
 import {StyleSheet, ViewStyle} from "react-native";
 
-import {COLORS} from "../../constants";
+import {COLORS, SIZES} from "../../constants";
 
 interface Styles {
     container: ViewStyle
@@ -11,7 +11,7 @@ interface Styles {
 const styles = StyleSheet.create<Styles>({
     container: {
       backgroundColor: COLORS.background,
-        paddingTop: 20
+        paddingTop: SIZES.padding1
     },
     scrollContainer: {
         display: "flex",

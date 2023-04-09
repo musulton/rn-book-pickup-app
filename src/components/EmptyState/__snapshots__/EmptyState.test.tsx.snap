@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<EmptyState /> should render correctly with props 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "display": "flex",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <Text>
+    Test
+  </Text>
+</View>
+`;
+
+exports[`<EmptyState /> should render correctly without props 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "display": "flex",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <Text>
+    Data is nof found
+  </Text>
+</View>
+`;

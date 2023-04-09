@@ -11,7 +11,12 @@ interface IconProps {
 
 const Icon: React.FC<IconProps> = (props) => {
     return (
-        <Ionicons name={props.name} size={props.size} color={props.color} onPress={props.onPress} />
+        <Ionicons
+            name={props.name}
+            size={props.size}
+            color={props.color}
+            onPress={props.onPress}
+        />
     )
 }
 

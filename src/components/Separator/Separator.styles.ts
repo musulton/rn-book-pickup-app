@@ -1,7 +1,12 @@
-import {StyleSheet} from "react-native";
+import {StyleSheet, ViewStyle} from "react-native";
+
 import {COLORS} from "../../constants";
 
-const styles = StyleSheet.create({
+interface Styles {
+    separator: ViewStyle
+}
+
+const styles = StyleSheet.create<Styles>({
     separator: {
         height: 1,
         backgroundColor: COLORS.lightGray3

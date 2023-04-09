@@ -6,7 +6,6 @@ import {Book} from "../../types";
 
 interface CardBookProps extends Book {
     onPress?: () => void
-    withImage?: boolean
 }
 
 interface LeftSectionProps {
@@ -46,7 +45,7 @@ const CardBook: React.FC<CardBookProps> = (props: CardBookProps) => {
             onPress={props.onPress}
             disabled={!props.onPress}
         >
-            {props.withImage && <LeftSection coverImg={props.coverImg} />}
+            <LeftSection coverImg={props.coverImg} />
             <RightSection title={props.title} author={props.author} edition={props.edition} pickupDate={props.pickupDate} />
         </TouchableOpacity>
     )

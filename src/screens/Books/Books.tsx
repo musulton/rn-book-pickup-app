@@ -1,16 +1,15 @@
-import {ActivityIndicator, FlatList, ListRenderItemInfo, SafeAreaView, Text, View} from "react-native";
+import {ActivityIndicator, FlatList, ListRenderItemInfo, SafeAreaView} from "react-native";
 import React from "react";
 import {NavigationProp} from "@react-navigation/native";
 
+import Header from "../../components/Header";
+import EmptyState from "../../components/EmptyState";
 import CardBook from "../../components/CardBook";
-import {COLORS, ROUTES} from "../../constants";
+import {ROUTES} from "../../constants";
 import {Book} from "../../types";
 
 import styles from "./Books.styles";
 import useBooksHook from "./useBooksHook";
-import Header from "../../components/Header";
-import Separator from "../../components/Separator";
-import EmptyState from "../../components/EmptyState";
 
 interface BooksProps {
     navigation: NavigationProp<any>
@@ -42,7 +41,6 @@ const Books: React.FC<BooksProps> = (props) => {
                         edition={props.item.edition}
                         coverImg={props.item.coverImg}
                         onPress={onNavigate(props.item)}
-                        withImage={true}
                     />
                 )}
                 onEndReached={onEndReached}
@@ -51,6 +49,7 @@ const Books: React.FC<BooksProps> = (props) => {
                 ListEmptyComponent={<EmptyState />}
                 ListFooterComponent={hasData ? <ActivityIndicator size={"small"} /> : null}
                 initialNumToRender={10}
+                testID={"bookList"}
             />
         </SafeAreaView>
     )

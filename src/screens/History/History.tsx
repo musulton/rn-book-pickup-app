@@ -10,15 +10,17 @@ import styles from "./History.styles";
 import EmptyState from "../../components/EmptyState";
 
 const History: React.FC = () => {
-    const books = useSelector((state: any) => state?.books?.books)
+    const books = useSelector((state: any) => state?.books)
 
     return (
         <SafeAreaView style={styles.container}>
-            <Text style={styles.title}>List of books borrowed</Text>
+            <View style={styles.headerWrapper}>
+                <Text style={styles.headerTitle}>List of books borrowed</Text>
+            </View>
             <FlatList
                 data={books}
                 renderItem={(props: ListRenderItemInfo<Book>) => (
-                    <CardBook {...props.item} withImage={true} />
+                    <CardBook {...props.item}/>
                 )}
                 ItemSeparatorComponent={Separator}
                 contentContainerStyle={books.length < 1 && styles.scrollContainer}

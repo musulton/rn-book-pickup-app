@@ -1,0 +1,156 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<History /> should render History correctly 1`] = `
+<RCTSafeAreaView
+  style={
+    {
+      "backgroundColor": "#FEFEFE",
+      "display": "flex",
+      "flex": 1,
+      "paddingTop": 20,
+    }
+  }
+>
+  <View
+    style={
+      {
+        "borderBottomColor": "#EFEFF0",
+        "borderBottomWidth": 1,
+        "paddingVertical": 10,
+      }
+    }
+  >
+    <Text
+      style={
+        {
+          "fontSize": 20,
+          "fontWeight": "bold",
+          "textAlign": "center",
+        }
+      }
+    >
+      List of books borrowed
+    </Text>
+  </View>
+  <RCTScrollView
+    ItemSeparatorComponent="Separator"
+    ListEmptyComponent={
+      <EmptyState
+        text="You haven't picked up any books yet"
+      />
+    }
+    contentContainerStyle={false}
+    data={
+      [
+        {
+          "author": "author",
+          "edition": "edition",
+          "title": "title",
+        },
+      ]
+    }
+    getItem={[Function]}
+    getItemCount={[Function]}
+    keyExtractor={[Function]}
+    onContentSizeChange={[Function]}
+    onLayout={[Function]}
+    onMomentumScrollBegin={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={50}
+    stickyHeaderIndices={[]}
+    viewabilityConfigCallbackPairs={[]}
+  >
+    <View>
+      <View
+        onFocusCapture={[Function]}
+        onLayout={[Function]}
+        style={null}
+      >
+        <CardBook
+          author="author"
+          edition="edition"
+          title="title"
+        />
+      </View>
+    </View>
+  </RCTScrollView>
+</RCTSafeAreaView>
+`;
+
+exports[`<History /> should render History correctly when empty state 1`] = `
+<RCTSafeAreaView
+  style={
+    {
+      "backgroundColor": "#FEFEFE",
+      "display": "flex",
+      "flex": 1,
+      "paddingTop": 20,
+    }
+  }
+>
+  <View
+    style={
+      {
+        "borderBottomColor": "#EFEFF0",
+        "borderBottomWidth": 1,
+        "paddingVertical": 10,
+      }
+    }
+  >
+    <Text
+      style={
+        {
+          "fontSize": 20,
+          "fontWeight": "bold",
+          "textAlign": "center",
+        }
+      }
+    >
+      List of books borrowed
+    </Text>
+  </View>
+  <RCTScrollView
+    ItemSeparatorComponent="Separator"
+    ListEmptyComponent={
+      <EmptyState
+        text="You haven't picked up any books yet"
+      />
+    }
+    contentContainerStyle={
+      {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+      }
+    }
+    data={[]}
+    getItem={[Function]}
+    getItemCount={[Function]}
+    keyExtractor={[Function]}
+    onContentSizeChange={[Function]}
+    onLayout={[Function]}
+    onMomentumScrollBegin={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={50}
+    stickyHeaderIndices={[]}
+    viewabilityConfigCallbackPairs={[]}
+  >
+    <View>
+      <EmptyState
+        onLayout={[Function]}
+        text="You haven't picked up any books yet"
+      />
+    </View>
+  </RCTScrollView>
+</RCTSafeAreaView>
+`;

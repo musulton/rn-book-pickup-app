@@ -5,7 +5,7 @@ const LIMIT_PER_PAGE = 10
 
 interface GetBooksParams {
     page: number
-    limit?: number
+    limit: number
 }
 
 export const getBooks: (params: GetBooksParams) => Promise<any> = (params) => {

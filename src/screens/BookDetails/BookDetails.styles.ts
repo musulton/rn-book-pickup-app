@@ -1,4 +1,5 @@
 import {ImageStyle, StyleSheet, TextStyle, ViewStyle} from "react-native";
+
 import {COLORS, SIZES} from "../../constants";
 
 interface Styles {
@@ -27,7 +28,7 @@ const styles = StyleSheet.create<Styles>({
     imageWrapper: {
         justifyContent: "center",
         alignItems: "center",
-        padding: 20,
+        padding: SIZES.padding1,
     },
     image: {
         width: 150,
@@ -64,7 +65,7 @@ const styles = StyleSheet.create<Styles>({
         paddingHorizontal: SIZES.padding1
     },
     buttonWrapper: {
-        padding: 20,
+        padding: SIZES.padding1,
         display: "flex",
         flexDirection: "row",
         justifyContent: "center"

@@ -1,0 +1,236 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CardBook /> should render <CardBook /> correctly 1`] = `
+<View
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": false,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    {
+      "alignItems": "center",
+      "display": "flex",
+      "flexDirection": "row",
+      "marginVertical": 10,
+      "opacity": 1,
+      "paddingHorizontal": 10,
+    }
+  }
+>
+  <View
+    style={
+      {
+        "marginRight": 5,
+        "resizeMode": "stretch",
+      }
+    }
+  >
+    <Image
+      source={
+        {
+          "uri": "google.com",
+        }
+      }
+      style={
+        {
+          "borderRadius": 6,
+          "height": 100,
+          "resizeMode": "cover",
+          "width": 70,
+        }
+      }
+    />
+  </View>
+  <View
+    style={
+      {
+        "alignContent": "center",
+        "display": "flex",
+        "flex": 1,
+        "justifyContent": "center",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <Text
+      numberOfLines={2}
+      style={
+        {
+          "fontSize": 18,
+          "fontWeight": "500",
+        }
+      }
+    >
+      title
+    </Text>
+    <Text
+      numberOfLines={1}
+      style={
+        {
+          "color": "#64676D",
+          "marginVertical": 5,
+        }
+      }
+    >
+      author
+    </Text>
+    <Text
+      numberOfLines={1}
+      style={
+        {
+          "fontSize": 16,
+          "fontWeight": "500",
+        }
+      }
+    >
+      edition
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`<CardBook /> should render <CardBook /> correctly with pickupDate 1`] = `
+<View
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": false,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    {
+      "alignItems": "center",
+      "display": "flex",
+      "flexDirection": "row",
+      "marginVertical": 10,
+      "opacity": 1,
+      "paddingHorizontal": 10,
+    }
+  }
+>
+  <View
+    style={
+      {
+        "marginRight": 5,
+        "resizeMode": "stretch",
+      }
+    }
+  >
+    <Image
+      source={
+        {
+          "uri": "google.com",
+        }
+      }
+      style={
+        {
+          "borderRadius": 6,
+          "height": 100,
+          "resizeMode": "cover",
+          "width": 70,
+        }
+      }
+    />
+  </View>
+  <View
+    style={
+      {
+        "alignContent": "center",
+        "display": "flex",
+        "flex": 1,
+        "justifyContent": "center",
+        "marginLeft": 10,
+      }
+    }
+  >
+    <Text
+      numberOfLines={2}
+      style={
+        {
+          "fontSize": 18,
+          "fontWeight": "500",
+        }
+      }
+    >
+      title
+    </Text>
+    <Text
+      numberOfLines={1}
+      style={
+        {
+          "color": "#64676D",
+          "marginVertical": 5,
+        }
+      }
+    >
+      author
+    </Text>
+    <Text
+      numberOfLines={1}
+      style={
+        {
+          "fontSize": 16,
+          "fontWeight": "500",
+        }
+      }
+    >
+      edition
+    </Text>
+    <Text
+      style={
+        {
+          "fontSize": 16,
+          "marginTop": 5,
+        }
+      }
+    >
+      Book Date: 
+      12 Mei 2023
+    </Text>
+  </View>
+</View>
+`;
