@@ -1,5 +1,7 @@
 import React from "react";
 
+import {getTomorrowDate} from "../../utils/function";
+
 interface UseBookDetails {
     getter: {
         selectedDate: Date
@@ -12,7 +14,7 @@ interface UseBookDetails {
 }
 
 const useBookDetails: () => UseBookDetails = () => {
-    const [selectedDate, setSelectedDate] = React.useState(new Date());
+    const [selectedDate, setSelectedDate] = React.useState(getTomorrowDate());
     const [datePickerVisible, setDatePickerVisible] = React.useState(false);
 
     return {

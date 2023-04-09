@@ -21,3 +21,10 @@ export const getDummyCoverImg = (): string => {
     const randomPick = Math.floor(Math.random() * dummyCoverBook.length);
     return dummyCoverBook[randomPick]
 }
+
+export const getTomorrowDate = (): Date => {
+    const today = new Date()
+    const tomorrow = today.setDate(today.getDate() + 1)
+
+    return new Date(tomorrow)
+}

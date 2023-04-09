@@ -6,9 +6,11 @@ import {book} from "../../fixtures/testData";
 
 import BookDetails from "./BookDetails";
 
+const mockDate = new Date("25-04-1995")
 jest
     .mock("../../utils/function", () => ({
-        getRandomColor: jest.fn(() => "white")
+        getRandomColor: () => "white",
+        getTomorrowDate: () => mockDate
     }))
     .mock("react-redux")
 
@@ -17,7 +19,6 @@ describe("<BookDetails />", () => {
         ...book,
         coverImg: "image.jpg"
     }
-    const mockDate = new Date(2023, 3, 1)
     const mockProps = {
         navigation: {
             goBack: jest.fn()
@@ -32,15 +33,6 @@ describe("<BookDetails />", () => {
     afterEach(() => {
         cleanup()
     })
-
-    beforeAll(() => {
-        jest.useFakeTimers("modern");
-        jest.setSystemTime(mockDate);
-    });
-
-    afterAll(() => {
-        jest.useRealTimers();
-    });
 
     it("should render correctly", () => {
         render(<BookDetails {...mockProps} />)

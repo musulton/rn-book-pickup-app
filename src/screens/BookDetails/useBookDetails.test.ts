@@ -2,18 +2,13 @@ import {renderHook, act} from "@testing-library/react-native";
 
 import useBookDetails from "./useBookDetails";
 
+const mockDate = new Date("25-04-1995")
+jest
+    .mock("../../utils/function", () => ({
+        getTomorrowDate: () => mockDate
+    }))
+
 describe("useBookDetails", () => {
-    const mockDate = new Date(2023, 3, 1)
-
-    beforeAll(() => {
-        jest.useFakeTimers("modern");
-        jest.setSystemTime(mockDate);
-    });
-
-    afterAll(() => {
-        jest.useRealTimers();
-    });
-
     it("should return data with getter and setter correctly", () => {
         const { result } = renderHook(useBookDetails)
         const {getter, setter} = result.current

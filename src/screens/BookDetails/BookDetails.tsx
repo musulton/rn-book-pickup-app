@@ -5,7 +5,7 @@ import DateTimePicker from "react-native-modal-datetime-picker";
 import {useDispatch} from "react-redux";
 
 import Button from "../../components/Button";
-import {getRandomColor} from "../../utils/function";
+import {getRandomColor, getTomorrowDate} from "../../utils/function";
 import {COLORS} from "../../constants";
 import {Book} from "../../types";
 import {add} from "../../store/slices/bookSlice";
@@ -49,7 +49,7 @@ const SubmitBook: React.FC<SubmitBookProps> = (props) => {
                 onCancel={hideDatePicker}
                 textColor={COLORS.black}
                 confirmTextIOS={"Book Now"}
-                minimumDate={new Date()}
+                minimumDate={getTomorrowDate()}
             />
         </View>
     );
